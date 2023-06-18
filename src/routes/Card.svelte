@@ -3,10 +3,10 @@
     export let answer: string;
     export let questionsToAsk: string[] | undefined = undefined;
     export let additionalInfo: string[] | undefined = undefined;
-    let flipped: boolean = false;
+    let flipped: boolean = true;
 </script>
 
-<div class="scene scene--card">
+<div class="scene">
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div class="card" class:is-flipped={flipped} on:click={() => flipped = !flipped}>
         <div class="card__face card__face--front">
@@ -35,7 +35,7 @@
 .scene {
     display: inline-block;
     width: 100%;
-    height: 260px;
+    min-height: 360px;
     margin: 40px 0;
     perspective: 600px;
   }
@@ -61,10 +61,6 @@
   color: white;
   font-size: 16px;
   backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 12px;
   border-radius: 5px;
 }
@@ -72,12 +68,14 @@
 .card__face--front {
   background: #026670;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__face--back {
   background: #0393a1;
   transform: rotateY(180deg);
-  justify-content: start;
-  align-items: start;
+  overflow-y: auto;
 }
 </style>
