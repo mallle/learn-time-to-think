@@ -3,7 +3,7 @@
     export let answer: string;
     export let questionsToAsk: string[] | undefined = undefined;
     export let additionalInfo: string[] | undefined = undefined;
-    let flipped: boolean = true;
+    let flipped: boolean = false;
 </script>
 
 <div class="scene scene--card">
