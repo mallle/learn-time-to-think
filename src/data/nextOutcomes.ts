@@ -56,15 +56,15 @@ export const nextOutcomes: { [key: string]: FlipCard[] } = {
             question: "Identifying All Assumptions",
             answer: "Finding all the assumptions about something.",
             questionsToAsk: [
-                "What are you assuming that (insert focus of assumptions)?",
-                "and wht else are you assuming that (insert focus of assumptions)?",
+                "What are you assuming that _____(insert focus of assumptions)?",
+                "and what else are you assuming that _____(insert focus of assumptions)?",
             ]        
         },
         {
             question: "Determining the Truth of an Assumption",
             answer: "Determining the Truth of an Assumption can be done with this question?",
             questionsToAsk: [
-                "Do you this it is true that (insert assumption)?",
+                "Do you think it is true that _____? What are your reasons for thinking so? ",
             ]        
         }
     ],
@@ -133,7 +133,7 @@ export const nextOutcomes: { [key: string]: FlipCard[] } = {
             question: "Den Wahrheitsgehalt einer Annahme bestimmen",
             answer: "",
             questionsToAsk: [
-                "Denkst du , dass es wahr ist, dass _____? Was sind deine Gründe das zu denken? "
+                "Denkst du, dass es wahr ist, dass _____? Was sind deine Gründe das zu denken? "
             ]
         }
     ]

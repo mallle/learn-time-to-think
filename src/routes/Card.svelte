@@ -1,14 +1,28 @@
 <script lang="ts">
     export let question: string;
-    export let answer: string;
+    export let answer: string | undefined = undefined;
     export let questionsToAsk: string[] | undefined = undefined;
     export let additionalInfo: string[] | undefined = undefined;
-    let flipped: boolean = true;
+    export let alwaysFlipped: boolean = false;
+    export let canFlip: boolean = true;
+
+    let flipped: boolean = false;
+    
+    $: flipped;
+
+    $: { alwaysFlipped
+        if(alwaysFlipped) {
+          flipped = true;
+        }
+        if(!alwaysFlipped) {
+          flipped = false;
+        }
+    }
 </script>
 
 <div class="scene">
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="card" class:is-flipped={flipped} on:click={() => flipped = !flipped}>
+    <div class="card" class:is-flipped={flipped && canFlip} on:click={() => flipped = !flipped}>
         <div class="card__face card__face--front">
             <p>{question}</p>
         </div>
