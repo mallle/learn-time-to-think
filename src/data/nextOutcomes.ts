@@ -80,7 +80,7 @@ export const nextOutcomes: { [key: string]: FlipCard[] } = {
             question: "Gefühl",
             answer: "Wenn der denkende sich auf eine bestimmte art und weise fühlen will.",
             questionsToAsk: [
-                "Wenn du wüsstest, ______, wie würdest du dich fühlen?"
+                "Wenn du wüsstest, dass ______, wie würdest du dich fühlen?"
             ]
         },
         {
