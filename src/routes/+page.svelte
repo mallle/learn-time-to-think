@@ -19,12 +19,36 @@
         en: {
             title: "Next outcomes",
             generalQuestions: "General Questions",
-            showAnswers: "Always show answers"
+            showAnswers: "Always show answers",
+            break: "Pausenüberlegung",            
+            breakStep1: "Wo kommt der denkende her?",
+            breakStep2: "Wo will der denkende hin?",
+            breakStep3: "Was braucht der denkende von mir?",
+            remember: "Don't forget",
+            remember1: "Das darf sein, auch das darf sein.",
+            remember2: "Denke dass du dich mehr anvertraust.",
+            remember3: "Jede Frage hat die funktion die letze zu sein.",
+            remember4: "Sitzungsergebnis: --> denkende soll für sich selbst denken.",
+            remember5: "I will give you my thinking but what more do you think or feel or want to say?",
+            remember6: "Why am I talking (WAIT)",
+            remember7: "Das nimmst du an, denkst du dass es wahr ist?",
         },
         de: {
             title: "Sitzungsergebnisse",
             generalQuestions: "Allgemeine Fragen",
-            showAnswers: "Zeige antworten"
+            showAnswers: "Zeige antworten",
+            break: "Pausenüberlegung",
+            breakStep1: "Wo kommt der denkende her?",
+            breakStep2: "Wo will der denkende hin?",
+            breakStep3: "Was braucht der denkende von mir?",
+            remember: "Nicht vergessen",
+            remember1: "Das darf sein, auch das darf sein.",
+            remember2: "Denke dass du dich mehr anvertraust.",
+            remember3: "Jede Frage hat die funktion die letze zu sein.",
+            remember4: "Sitzungsergebnis: --> denkende soll für sich selbst denken.",
+            remember5: "Ich kann dir eine Gedanken teil aber was noch, denkst du, fühlst du oder möchtest du außerdem nocht sagen?",
+            remember6: "Why am I talking (WAIT)",
+            remember7: "Das nimmst du an, denkst du dass es wahr ist?",
         }
     }
 
@@ -41,6 +65,13 @@
 
     <button class="lang" class:active={$language === "en"} on:click={() => changeLang("en")}>en</button>
     <button class="lang" class:active={$language === "de"} on:click={() => changeLang("de")}>de</button>
+
+    <h2>{TEXT[$language].break}</h2>
+    <ul>
+        <li>{TEXT[$language].breakStep1}</li>
+        <li>{TEXT[$language].breakStep2}</li>
+        <li>{TEXT[$language].breakStep3}</li>
+    </ul>
 
     <h2>{TEXT[$language].generalQuestions}</h2>
     <ul>
@@ -110,6 +141,17 @@
            <p>Befriende alternative Annehme</p>
         </div>
     </div>
+
+    <h2>{TEXT[$language].remember}</h2>
+    <ul>
+        <li>{TEXT[$language].remember1}</li>
+        <li>{TEXT[$language].remember2}</li>
+        <li>{TEXT[$language].remember3}</li>
+        <li>{TEXT[$language].remember4}</li>
+        <li>{TEXT[$language].remember5}</li>
+        <li>{TEXT[$language].remember6}</li>
+        <li>{TEXT[$language].remember7}</li>
+    </ul>
 </section>
 
 <style>
@@ -124,6 +166,10 @@
         text-align: center;
         font-weight: 600;
         font-size: 32px;
+    }
+
+    * + h2 {
+        margin-top: 50px;
     }
 
     nav {

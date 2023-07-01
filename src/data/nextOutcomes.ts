@@ -87,17 +87,19 @@ export const nextOutcomes: { [key: string]: FlipCard[] } = {
             question: "Verstehen warum ich ...",
             answer: "Braucht keine Incisive Question. ",
             questionsToAsk: [
-                "Welche Annahme hindert dich daran (führt dazu) ______?",
-                "Welche Annahme hindert dich noch daran (führt dazu) ______?",
+                "Welche Annahme hindert dich daran/führt dazu ______?",
+                "Welche Annahme hindert dich noch daran/führt dazu  ______?",
                 "Welche Annahme hindert dich am meisten daran (führt am meisten dazu) ______?",
-                "Denkst du, dass es wahr ist ______?"
+                "Denkst du, dass es wahr ist ______? Und was sind deine Gründe dafür"
             ]
         },
         {
             question: "Aufhören etwas zu tun, Aufhören etwas zu fühlen, Blokaden auflösen",
             answer: "",
             questionsToAsk: [
-                "Wenn du wüsstest, dass ______ wie würdest du dann ______? "
+                "Welche annahmen führen dazu? ",
+                "Wenn du wüsstest, dass ______ wie würdest du dann ______? ",
+                "Wenn du wüsstest, dass ______ was wäre dann anders? "
             ]
         },
         {
