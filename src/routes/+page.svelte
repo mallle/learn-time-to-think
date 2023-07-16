@@ -3,6 +3,7 @@
     import { language } from '../stores/language';
     import { questions } from '../data/questions';
     import NextOutcome from '@components/NextOutcome.svelte';
+    import { assumptions, incisiveQuestion } from '../data/assumptions';
 
     let showAnswers: boolean = false;
 
@@ -11,6 +12,7 @@
             title: "Next outcomes",
             generalQuestions: "General Questions",
             showAnswers: "Always show answers",
+            assumptions: "Blocking Assumption",
             break: "Waves and Pauses",            
             breakStep1: "What did the thinker just do?",
             breakStep2: "Is the outcome still the same?",
@@ -28,6 +30,7 @@
             title: "Sitzungsergebnisse",
             generalQuestions: "Allgemeine Fragen",
             showAnswers: "Zeige antworten",
+            assumptions: "Zentrale hinderliche Annahme",
             break: "Pausenüberlegung",
             breakStep1: "Wo kommt der denkende her?",
             breakStep2: "Wo will der denkende hin?",
@@ -50,14 +53,16 @@
 <section>
     <h1>Practice Time to Think Concepts</h1>
 
-    <button class="lang" class:active={$language === "en"} on:click={() => changeLang("en")}>en</button>
-    <button class="lang" class:active={$language === "de"} on:click={() => changeLang("de")}>de</button>
-
+    <div>
+        <button class="lang" class:active={$language === "en"} on:click={() => changeLang("en")}>en</button>
+        <button class="lang" class:active={$language === "de"} on:click={() => changeLang("de")}>de</button>    
+    </div>
+    
     <h2>{TEXT[$language].break}</h2>
     <ul>
-        <li>{TEXT[$language].breakStep1}</li>
-        <li>{TEXT[$language].breakStep2}</li>
-        <li>{TEXT[$language].breakStep3}</li>
+        <li class="question">{TEXT[$language].breakStep1}</li>
+        <li class="question">{TEXT[$language].breakStep2}</li>
+        <li class="question">{TEXT[$language].breakStep3}</li>
     </ul>
 
     <h2>{TEXT[$language].generalQuestions}</h2>
@@ -66,9 +71,56 @@
             <li class="question">{question}</li>
         {/each}
     </ul>
+</section>
 
+<section>
+    <h2>{TEXT[$language].assumptions}</h2>
+
+    <div class="cards">
+        {#each assumptions[$language].assumption as type }
+            <div class="card big description">
+                <p>{type.type}</p>
+            </div>
+        {/each}
+    </div>
+    <div class="cards">
+        {#each assumptions[$language].types as type, index }
+            <div class="card arrow-down" class:arrow-up={index > 2}>
+                {#if type.thinker}
+                    <p>{type.thinker}</p>
+                {/if}
+                {#if type.criteria}
+                    <p>{type.criteria}</p>
+                {/if}
+                {#if type.descriptions}
+                    {#each type.descriptions as description }
+                        <p>{description}</p>
+                    {/each}
+                {/if}
+            </div>
+        {/each}
+    </div>
+    <div class="cards">
+        {#each assumptions[$language].types as type, index }
+            <div class="card description" class:arrow-down={index <= 2} class:arrow-up={index > 2}>
+                <p>{type.type}</p>
+                <p>{type.question}</p>
+            </div>
+        {/each}
+    </div>
+    <div class="half cards">
+        <div class="card big description">
+            <p>{incisiveQuestion[$language].name}</p>
+            <p>{incisiveQuestion[$language].type}</p>
+            {#each incisiveQuestion[$language].questions as question }
+                <p>{question}</p>
+            {/each}
+        </div>
+    </div>
+</section>
+
+<section>
     <h2>{TEXT[$language].title}</h2>
-
 
     <NextOutcome section={1} {showAnswers}/>
 
@@ -80,48 +132,6 @@
 </section>
 
 <section>
-    <h2>Zentrale hinderliche Annahme</h2>
-
-    <div class="cards">
-        <div class="card arrow-down">
-           <p>Denker: wahr</p>
-           <p>Kriterien: unwahr</p>
-        </div>
-        <div class="card arrow-down">
-           <p>Denker: unwahr</p>
-           <p>Kriterien: unwahr</p>
-        </div>
-        <div class="card arrow-down">
-           <p>Denker: wahr & möglich</p>
-           <p>Kriterien: wahr & möglich</p>
-        </div>
-    </div>
-    <div class="cards">
-        <div class="card arrow-right">
-            <p>Lässt dich das denken-Frage</p>
-            <p>Welche Annahme lässt dich denken, es sei wahr, dass ______</p>
-            <p>Einladungsfrage</p>
-            <p>Sie möchten ______. Sie denekn, dass es wahr ist, dass ______. Was könntst du stattdessen glaubhaft annahmen, um ______<p>
-            <p>Möchtest du das denken-Frage</p>
-            <p>Welche Annahme führt dazu, dass du denken möchtest es sei unwahr, dass ______?</p>
-        </div>
-        <div class="card arrow-down">
-            <p>Frage nach der befreiende anternativen Annahme</p>
-            <p>Wenn es also nicht wahr ist, dass ______ - was sind deine Worte für das, was wahr und befriend ist?</p>
-            <p>Möchtest du das denken-Frage</p>
-            <p>Welche Annahme führt dazu, dass du aufhören möchtest zu denken es sei wahr, dass ______?</p>
-        </div>
-        <div class="card">
-           <p>Übergangsfrage</p>
-           <p>Es ist möglich, dass _____. Welche Annahme verursacht, dass das sie daran hindert, ______?</p>
-        </div>
-    </div>
-    <div class="cards">
-        <div class="card">
-           <p>Befriende alternative Annehme</p>
-        </div>
-    </div>
-
     <h2>{TEXT[$language].remember}</h2>
     <ul>
         <li>{TEXT[$language].remember1}</li>
@@ -136,7 +146,7 @@
 
 <style>
     section {
-        max-width: 900px;
+        max-width: 1000px;
         align-items: center;
         margin: auto;
         padding: 10px 20px;
@@ -153,12 +163,13 @@
     }
 
     .question + .question {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     .cards {
         display: flex;
         justify-content: space-around;
+        gap: 10px;
     }
 
     .cards + .cards {
@@ -174,10 +185,13 @@
         text-align: center;
     }
 
-    .card p:nth-child(odd) {
-        font-weight: 600;
+    .big {
+        width: 100%;
     }
 
+    .description p:first-child {
+        font-weight: 600;
+    }
 
     .arrow-down:after {
         content: url('data:image/svg+xml; utf8, <svg width="30" height="30" viewBox="0 0 30 203" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M14.5801 0.369293L0.146321 25.3693H29.0138L14.5801 0.369293ZM17.0801 202.051L17.0801 22.8693H12.0801L12.0801 202.051H17.0801Z" fill="black"/></svg>');
@@ -188,12 +202,14 @@
         transform: rotate(180deg);
     }
 
-    .arrow-right:after {
+    .arrow-up:before {
         content: url('data:image/svg+xml; utf8, <svg width="30" height="30" viewBox="0 0 30 203" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M14.5801 0.369293L0.146321 25.3693H29.0138L14.5801 0.369293ZM17.0801 202.051L17.0801 22.8693H12.0801L12.0801 202.051H17.0801Z" fill="black"/></svg>');
         position: absolute;
-        bottom: -20px;
-        left: 100px;
-        right: 0;
-        transform: rotate(135deg);
+        top: -20px;
+        right: 100px;
+    }
+
+    .half {
+        width: 60%;
     }
 </style>
