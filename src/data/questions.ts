@@ -6,7 +6,6 @@ export const questions: { [key: string]: string[] } = {
         "What are you assuming that is stopping (or making) you ______? ",
         "What else are you assuming that is stopping (or making) you ______? ",
         "What are you assuming that is most stopping (or making) you ______? ",
-        "Do you think it is true that ______? ",
     ],
     de: [
         "Worüber möchtest du nachdenken und was sind deine Gedanken?",
@@ -14,8 +13,6 @@ export const questions: { [key: string]: string[] } = {
         "Was noch, wenn überhaupt etwas möchtet du in der verbleibende Zeit erreichen?",
         "Welche annahmen hindern dich möglicherweise daran, ______ zu tun oder ______ zu fühlen?",
         "Welche annahmen hindern dich noch daran, ______ zu tun oder ______ zu fühlen?",
-        "Denskt du, das es wahr ist, dass ______? Aus welchen Gründen denkst du  dass?",
-        "Wenn es als nicht wahr ist, dass ______, was sind deine Worte für das, was wahr und befriend ist?",
-        "Wenn du wüsstest, dass ______ wie würdest du dann?",
+        "Welche annahmen hindern dich am meisten, ______ zu tun oder ______ zu fühlen?",
     ]
 };

@@ -3,6 +3,11 @@ export const assumptions: { [key: string]: {[key: string]: Assumptions[] }} = {
         assumption: [
             {
                 type: "Check assumption",
+                question: "Determining the Truth of an Assumption",
+                descriptions: [
+                    "Do you think it is true that _____? ",
+                    "What are your reasons for thinking so? ",
+                ]        
             },
         ],
         types: [ 
@@ -44,6 +49,10 @@ export const assumptions: { [key: string]: {[key: string]: Assumptions[] }} = {
         assumption: [
             {
                 type: "Check assumption",
+                question: "Den Wahrheitsgehalt einer Annahme bestimmen",
+                descriptions: [
+                    "Denkst du, dass es wahr ist, dass _____? Was sind deine Gründe das zu denken? "
+                ]
             },
         ],
         types: [

@@ -80,6 +80,12 @@
         {#each assumptions[$language].assumption as type }
             <div class="card big description">
                 <p>{type.type}</p>
+                <p>{type.question}</p>
+                {#if type.descriptions}
+                    {#each type.descriptions as description }
+                        <p>{description}</p>
+                    {/each}
+                {/if}
             </div>
         {/each}
     </div>

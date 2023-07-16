@@ -21,52 +21,45 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
             {
                 question: "Understanding Why I",
                 answer: "The Thinker has to find the untrue assumption and found out if this is true or not. We do not need an Incisive question here.",
-                questionsToAsk: [
-                    "What are you assuming that is stopping (or making) you ______?",
-                    "What else are you assuming that is stopping (or making) you ______?",
-                    "What are you assuming that is most stopping (or making) you ______? ",
-                    "Do you thing it is true that ______?",
-                ],
                 iq: "No IQ - only find the untrue assumption"
-            },
-            {
-                question: "Start Assuming Something",
-                answer: "Conforming the truth of a specific assumption and embed it with an Incisive question.",
-                questionsToAsk: [
-                    "If you knew that ______, what would change for you.",
-                ]        
-            },
-        ],
-        3: [
-            {
-                question: "Stop Assuming Something",
-                answer: "First conforming that an assumption is untrue, and then find the liberation true assumption and embed it with an Incisive Question",
-                questionsToAsk: [
-                    "If you knew that ______, how would you ______? ",
-                ]        
-            },
-            {
-                question: "Feeling the Truth or Untruth of an Assumption",
-                answer: "Thinker want to feel the truth or untruth of an assumption. To do so the Thinker has to find the true liberation alternative assumption and embed it with an Incisive Question",
-                questionsToAsk: [
-                    "If you knew that ______, how would you feel?",
-                ]        
             },
             {
                 question: "Identifying All Assumptions",
                 answer: "Finding all the assumptions about something.",
                 questionsToAsk: [
                     "What are you assuming that _____(insert focus of assumptions)?",
-                    "and what else are you assuming that _____(insert focus of assumptions)?",
-                ]        
+                    "And what else are you assuming that _____(insert focus of assumptions)?",
+                ],
+                iq: "No IQ - only collect all assumptions"      
+            },
+        ],
+        3: [
+            {
+                question: "Start Assuming Something",
+                answer: "Conforming the truth of a specific assumption and embed it with an Incisive question.",
+                questionsToAsk: [
+                    "Confirm the truth of the assumption",
+                ],
+                iq: "If you knew that ______, what would change for you."      
             },
             {
-                question: "Determining the Truth of an Assumption",
-                answer: "Determining the Truth of an Assumption can be done with this question?",
+                question: "Stop Assuming Something",
+                answer: "First conforming that an assumption is untrue, and then find the liberation true assumption and embed it with an Incisive Question",
                 questionsToAsk: [
-                    "Do you think it is true that _____? What are your reasons for thinking so? ",
-                ]        
-            }
+                    "Confirm assumption to be untrue",
+                    "Find true liberation assumption",
+                ],
+                iq: "If you knew that ______, how would you ______? ",    
+            },
+            {
+                question: "Feeling the Truth or Untruth of an Assumption",
+                answer: "Thinker want to feel the truth or untruth of an assumption. To do so the Thinker has to find the true liberation alternative assumption and embed it with an Incisive Question",
+                questionsToAsk: [
+                    "Found assumption is untrue",
+                    "Find the true liberation assumption",
+                ],
+                iq: "If you knew that ______, how would you feel?",       
+            },
         ],
         },
     de: {
@@ -84,21 +77,14 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
             {
                 question: "Gefühl",
                 answer: "Wenn der denkende sich auf eine bestimmte art und weise fühlen will.",
-                questionsToAsk: [
-                    "Wenn du wüsstest, dass ______, wie würdest du dich fühlen?"
-                ]
+                iq:"Wenn du wüsstest, dass ______, wie würdest du dich fühlen?"
             },
         ],
         2: [
             {
                 question: "Verstehen warum ich ...",
                 answer: "Braucht keine Incisive Question. ",
-                questionsToAsk: [
-                    "Welche Annahme hindert dich daran/führt dazu ______?",
-                    "Welche Annahme hindert dich noch daran/führt dazu  ______?",
-                    "Welche Annahme hindert dich am meisten daran (führt am meisten dazu) ______?",
-                    "Denkst du, dass es wahr ist ______? Und was sind deine Gründe dafür"
-                ]
+                iq: "Keine IQ - finde nur die unwahre annahme."
             },
             {
                 question: "Alle Annahmen herausfinden",
@@ -106,7 +92,8 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
                 questionsToAsk: [
                     "Welche Annahmen hast du zu ______?",
                     "Und welche Annahmen hast du noch zu ______?",
-                ]
+                ],
+                iq: "Keine iq: nur alle annahmen sammeln."
             },
         ],
         3: [
@@ -114,31 +101,29 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
                 question: "Anfangen etwas anzunehmen",
                 answer: "",
                 questionsToAsk: [
-                    "Wenn du wüsstest, dass ______, was würde sich für dich verändern?"
-                ]
+                    "Bestätigen das die annahme wahr ist."
+                ],
+                iq: "Wenn du wüsstest, dass ______, was würde sich für dich verändern?"
             },
             {
                 question: "Aufhören etwas anzunehmen",
                 answer: "",
                 questionsToAsk: [
-                    "Wenn du wüsstest, dass ______ wie würdest du dann ______? ",
-                ]
+                    "Annahme als unwahr bestätigen",
+                    "Wahre befreiende annahme finden",
+                    "Verinnerlichen der Wahre befreiende annahme durch IQ"
+                ],
+                iq: "Wenn du wüsstest, dass ______ wie würdest du dann ______?"
             },
             {
                 question: "Fühlen, dass eine Annahme war oder unwahr ist",
                 answer: "",
                 questionsToAsk: [
-                    "Wenn du wüssten, dass ______, wie würdest du dich Fühlen?"
-                ]
+                    "Annahme als unwahr erkannt",
+                    "Wahre befreiende annahme finden"
+                ],
+                iq: "Wenn du wüsstest, dass ______, wie würdest du dich fühlen?"
             },
-            
-            {
-                question: "Den Wahrheitsgehalt einer Annahme bestimmen",
-                answer: "",
-                questionsToAsk: [
-                    "Denkst du, dass es wahr ist, dass _____? Was sind deine Gründe das zu denken? "
-                ]
-            }
         ]
     }
 };
