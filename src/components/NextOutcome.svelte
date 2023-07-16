@@ -2,9 +2,8 @@
     import { browser } from '$app/environment';
     import { nextOutcomes } from '../data/nextOutcomes';
     import Carousel from 'svelte-carousel';
-    import Card from '../routes/Card.svelte';
     import { language } from '../stores/language';
-
+    import Card from '@components/Card.svelte';
     export let section: number;
     export let showAnswers: boolean;
 
@@ -57,26 +56,5 @@
 
     .carousel {
         max-width: 500px;
-    }
-
-    button {
-        border: none;
-        color: black;
-        color: white;
-        background-color: #03727d;
-        border-radius: 10px;
-        padding: 10px 20px;
-        box-shadow: 1px 2px 7px #f2f2f2;
-        cursor: pointer;
-        transition: all 0.15s ease-in-out;
-    }
-
-    button:hover {
-        transform: scale(.95);
-        background-color: #04909d;
-    }
-
-    button.active {
-        background-color: #059eac;
     }
 </style>

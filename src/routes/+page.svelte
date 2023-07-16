@@ -1,12 +1,8 @@
 <script lang="ts">
     import '../styles.css';
-    import Card from './Card.svelte';
-    import Carousel from 'svelte-carousel';
-    import { browser } from '$app/environment';
     import { language } from '../stores/language';
-    import { nextOutcomes } from '../data/nextOutcomes';
     import { questions } from '../data/questions';
-    import NextOutcome from '../components/NextOutcome.svelte';
+    import NextOutcome from '@components/NextOutcome.svelte';
 
     let showAnswers: boolean = false;
 

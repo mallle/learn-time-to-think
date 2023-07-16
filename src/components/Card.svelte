@@ -3,7 +3,7 @@
     export let answer: string | undefined = undefined;
     export let questionsToAsk: string[] | undefined = undefined;
     export let additionalInfo: string[] | undefined = undefined;
-    export let iq: string[] | undefined = undefined;
+    export let iq: string | undefined = undefined;
     export let alwaysFlipped: boolean = false;
     export let canFlip: boolean = true;
 
