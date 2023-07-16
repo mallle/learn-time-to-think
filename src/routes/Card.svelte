@@ -3,6 +3,7 @@
     export let answer: string | undefined = undefined;
     export let questionsToAsk: string[] | undefined = undefined;
     export let additionalInfo: string[] | undefined = undefined;
+    export let iq: string[] | undefined = undefined;
     export let alwaysFlipped: boolean = false;
     export let canFlip: boolean = true;
 
@@ -33,13 +34,18 @@
                <p>{info}</p>
               {/each}
           {/if}
-            {#if questionsToAsk}
-              <ul>
-                {#each questionsToAsk as question}
-                  <li>{question}</li>
-                {/each}
-              </ul>
-            {/if}
+          {#if questionsToAsk}
+            <ul>
+              {#each questionsToAsk as question}
+                <li>{question}</li>
+              {/each}
+            </ul>
+          {/if}
+          {#if iq}
+            <br>
+            <p>Incisive Question</p>
+            <p>{iq}</p>
+          {/if}
         </div>
     </div>
 </div>

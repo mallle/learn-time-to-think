@@ -6,24 +6,19 @@
     import { language } from '../stores/language';
     import { nextOutcomes } from '../data/nextOutcomes';
     import { questions } from '../data/questions';
+    import NextOutcome from '../components/NextOutcome.svelte';
 
-    let carousel: any;
-    let currentIndex: number = 0;
     let showAnswers: boolean = false;
-
-    function goToPage(index: number) {
-        carousel.goTo(index, { animated: false })
-    }
 
     const TEXT: { [key: string]: {[key: string]: string} } = {
         en: {
             title: "Next outcomes",
             generalQuestions: "General Questions",
             showAnswers: "Always show answers",
-            break: "Pausenüberlegung",            
-            breakStep1: "Wo kommt der denkende her?",
-            breakStep2: "Wo will der denkende hin?",
-            breakStep3: "Was braucht der denkende von mir?",
+            break: "Waves and Pauses",            
+            breakStep1: "What did the thinker just do?",
+            breakStep2: "Is the outcome still the same?",
+            breakStep3: "What does the thinker need not wo think for them self?",
             remember: "Don't forget",
             remember1: "Das darf sein, auch das darf sein.",
             remember2: "Denke dass du dich mehr anvertraust.",
@@ -55,10 +50,6 @@
     function changeLang(lang: string) {
         language.set(lang);
     }
-
-    function pageChange(event: any) {
-        currentIndex = event.detail;
-    }
 </script>
 <section>
     <h1>Practice Time to Think Concepts</h1>
@@ -82,19 +73,12 @@
 
     <h2>{TEXT[$language].title}</h2>
 
-    <nav>
-        {#each nextOutcomes[$language] as card, index}
-            <button class:active={currentIndex === index} on:click={() => goToPage(index)}>{card.question}</button>   
-        {/each}
-    </nav>
-    
-    {#if browser}
-        <Carousel bind:this={carousel}  on:pageChange={pageChange}>
-            {#each nextOutcomes[$language] as card}
-                <Card {...card} alwaysFlipped={showAnswers}/>
-            {/each}
-        </Carousel>
-    {/if}
+
+    <NextOutcome section={1} {showAnswers}/>
+
+    <NextOutcome section={2} {showAnswers}/>
+
+    <NextOutcome section={3} {showAnswers}/>
 
     <button class:active={showAnswers} on:click={() => showAnswers = !showAnswers}>{TEXT[$language].showAnswers}</button> 
 </section>
@@ -172,35 +156,8 @@
         margin-top: 50px;
     }
 
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    button {
-        border: none;
-        color: black;
-        color: white;
-        background-color: #03727d;
-        border-radius: 10px;
-        padding: 10px 20px;
-        box-shadow: 1px 2px 7px #f2f2f2;
-        cursor: pointer;
-        transition: all 0.15s ease-in-out;
-    }
-
-    button:hover {
-    transform: scale(.95);
-        background-color: #04909d;
-    }
-
     .question + .question {
         margin-top: 10px;
-    }
-
-    button.active {
-        background-color: #059eac;
     }
 
     .cards {
