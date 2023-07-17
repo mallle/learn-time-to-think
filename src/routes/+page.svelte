@@ -53,7 +53,7 @@
 <section>
     <h1>Practice Time to Think Concepts</h1>
 
-    <div>
+    <div class="lang-switch">
         <button class="lang" class:active={$language === "en"} on:click={() => changeLang("en")}>en</button>
         <button class="lang" class:active={$language === "de"} on:click={() => changeLang("de")}>de</button>    
     </div>
@@ -168,6 +168,12 @@
         margin-top: 50px;
     }
 
+    .lang-switch {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    
     .question + .question {
         margin-top: 20px;
     }
