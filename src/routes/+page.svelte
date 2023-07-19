@@ -16,7 +16,7 @@
             break: "Waves and Pauses",            
             breakStep1: "What did the thinker just do?",
             breakStep2: "Is the outcome still the same?",
-            breakStep3: "What does the thinker need not wo think for them self?",
+            breakStep3: "What does the thinker need not in order to think for them self?",
             remember: "Don't forget",
             remember1: "Das darf sein, auch das darf sein.",
             remember2: "Denke dass du dich mehr anvertraust.",

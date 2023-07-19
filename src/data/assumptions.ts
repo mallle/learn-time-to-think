@@ -21,27 +21,27 @@ export const assumptions: { [key: string]: {[key: string]: Assumptions[] }} = {
                     thinker: "Thinker: true (ongoing)", 
                     criteria: "Criteria: untrue", 
                     type: "Invitation Question",
-                    question: "You want to ....., you this it is true that ....., what could you credibly assume instead in order to .....?"
+                    question: "You want to ....., you think it is true that ....., what could you credibly assume instead in order to .....?"
                 },
                 {
                     thinker: "Thinker: untrue", 
                     criteria: "Criteria: untrue", 
-                    type: "Question for the true liberation assumption",
-                    question: "As it is not true that ....., what do you think is true an liberation instead?"
+                    type: "Question for the true liberating assumption",
+                    question: "As it is not true that ....., what do you think is true and liberating instead?"
                 },
                 {
                     thinker: "Thinker: true or possible", 
                     criteria: "Criteria: true or possible", 
                     type: "Transition Question",
-                    question: "It is possible that ....., what are you assuming that causes to stop/make you ..... ?",
+                    question: "It is possible that ....., what are you assuming that causes that to stop/make you .....?",
                 },
                 {
                     descriptions: [
-                        "Stop thinking that something is true that is true",
-                        "Start thinking something is untrue that is true"
+                        "Start thinking something is untrue that is actually true",
+                        "Stop thinking that something is true that is actually true"
                     ],
                     type: "Makes you want to think it question",
-                    question: "What are you assuming that makes you want to think it is untrue (or stop thinking it is true) that?",
+                    question: "What are you assuming that makes you want to think it is untrue that .....?     What are you assuming that makes you want to stop thinking it is true that .....?",
                 },
             ],
         },
