@@ -30,7 +30,7 @@
             title: "Sitzungsergebnisse",
             generalQuestions: "Allgemeine Fragen",
             showAnswers: "Zeige antworten",
-            assumptions: "Zentrale hinderliche Annahme",
+            assumptions: "Blockierende Annahme",
             break: "Pausenüberlegung",
             breakStep1: "Wo kommt der denkende her?",
             breakStep2: "Wo will der denkende hin?",
@@ -66,11 +66,11 @@
     </ul>
 
     <h2>{TEXT[$language].generalQuestions}</h2>
-    <ul>
+    <ol>
         {#each questions[$language] as question}
             <li class="question">{question}</li>
         {/each}
-    </ul>
+    </ol>
 </section>
 
 <section>

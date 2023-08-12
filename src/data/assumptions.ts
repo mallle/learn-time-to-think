@@ -48,10 +48,11 @@ export const assumptions: { [key: string]: {[key: string]: Assumptions[] }} = {
     de: {
         assumption: [
             {
-                type: "Check assumption",
+                type: "Check Annahmen",
                 question: "Den Wahrheitsgehalt einer Annahme bestimmen",
                 descriptions: [
-                    "Denkst du, dass es wahr ist, dass _____? Was sind deine Gründe das zu denken? "
+                    "Denkst du, dass es wahr ist, dass _____?", 
+                    "Was sind deine Gründe das zu denken? "
                 ]
             },
         ],
