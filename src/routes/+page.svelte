@@ -127,6 +127,8 @@
 
 <section>
     <h2>{TEXT[$language].title}</h2>
+    
+    <button class:active={showAnswers} on:click={() => showAnswers = !showAnswers}>{TEXT[$language].showAnswers}</button> 
 
     <NextOutcome section={1} {showAnswers}/>
 
@@ -134,7 +136,6 @@
 
     <NextOutcome section={3} {showAnswers}/>
 
-    <button class:active={showAnswers} on:click={() => showAnswers = !showAnswers}>{TEXT[$language].showAnswers}</button> 
 </section>
 
 <section>

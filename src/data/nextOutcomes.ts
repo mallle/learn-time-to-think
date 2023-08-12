@@ -87,7 +87,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
         1: [
             {
                 question: "Aktion",
-                answer: "Die denkende Person will planen, entscheiden oder herrausfinden was sie tun kann. Aber das denken ist blokiert.",
+                answer: "Die denkende Person möchte planen, entscheiden, herausfinden, wie sie etwas tun kann etc. Aber ihr Denken ist durch eine unwahre, beschränkende Annahme blockiert. Sie muss diese Annahme durch eine wahre, befreiende Annahme ersetzen und diese einbetten, um ihr Ergebnis zu erreichen.",
                 questionsToAsk: [
                     "AF: 1-6",
                     "Blockierende Annahme",
@@ -96,7 +96,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
             },
             {
                 question: "Aufhören etwas zu tun, Aufhören etwas zu fühlen, Blokaden auflösen",
-                answer: "Wenn die denkende Person aufhören will et was zu tun oder fühlen oder blokaden auflösen möchte",
+                answer: "Annahmen können nicht nur blockieren oder befreien, sie können auch dazu führen, dass die denkende Person etwas tut oder fühlt. Daher kann die denkende Person dann aufhören, etwas zu tun oder zu fühlen oder Blockaden auflösen, indem sie die unwahre beschränkende Annahme findet, die sie das tun oder fühlen lässt, und dann eine wahre befreiende alternative Annahme durch eine Incisive Question verinnerlichen.",
                 questionsToAsk: [
                     "AF: 1-6",
                     "Blockierende Annahme",
@@ -105,7 +105,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
             },
             {
                 question: "Gefühl",
-                answer: "Wenn der denkende sich auf eine bestimmte art und weise fühlen will.",
+                answer: "Die denkende Person möchte sich vielleicht auf eine bestimmte Art und Weise fühlen. Für solche Ergebnisse löst die denkende Person die Blockaden auf, indem sie zunächst herausfindet, welche unwahre Annahme das Ergebnis blockiert, dann eine befreiende alternative Annahme findet, und dann in eine Incisive Question einbaut, um das gewünschte Gefühl hervorzurufen. ",
                 questionsToAsk: [
                     "AF: 1-6",
                     "Blockierende Annahme",
@@ -116,7 +116,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
         2: [
             {
                 question: "Verstehen warum ich ...",
-                answer: "Braucht keine Incisive Question. ",
+                answer: "Bei genauem Hinschauen ist es nicht überraschend, dass die Antwort auf „Warum ich etwas tue oder fühle“ eine Annahme ist. Und wenn die denkende Person verstehen will, warum sie etwas tut oder fühlt, muss sie nur die unwahre Annahme finden, die dazu führt, dass sie eben das tut oder fühlt. Dann hat sie die Antwort auf das „Warum ich“. (Und weil sie hier bereits das Ergebnis erreicht hat, wird bei diesem Ergebnis keine Incisive Question konstruiert).",
                 questionsToAsk: [
                     "AF: 1-6",
                     "Blockierende Annahme",
@@ -125,7 +125,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
             },
             {
                 question: "Alle Annahmen herausfinden",
-                answer: "",
+                answer: "Denkende Person möchte einfach nur alle Annahmen identifizieren, die sie über etwas hat. ",
                 questionsToAsk: [
                     "AF: 1-3",
                     "Welche Annahmen hast du zu ______?",
@@ -137,7 +137,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
         3: [
             {
                 question: "Anfangen etwas anzunehmen",
-                answer: "",
+                answer: "Die denkende Person möchte anfangen etwas anzunehmen. Das kann sie tun, indem sie bestätigt, dass die Annahme wahr ist und sie dann in eine Incisive Question einbaut.",
                 questionsToAsk: [
                     "AF: 1-3",
                     "Blockierende Annahme",
@@ -147,7 +147,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
             },
             {
                 question: "Aufhören etwas anzunehmen",
-                answer: "",
+                answer: "Die denkende Person möchte aufhören, etwas anzunehmen. Das kann sie tun, indem sie bestätigt, dass die Annahme unwahr ist (oder eine unwahre Annahme findet, die sich darin verbirgt) und dann beginnt, etwas Befreiendes anzunehmen, indem sie eine befreiende alternative Annahme durch eine Incisive Question verinnerlicht.",
                 questionsToAsk: [
                     "AF: 1-3",
                     "Blockierende Annahme",
@@ -159,7 +159,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
             },
             {
                 question: "Fühlen, dass eine Annahme war oder unwahr ist",
-                answer: "",
+                answer: "Die denkende Person kann auch fühlen wollen, dass eine Annahme wahr ist, oder fühlen, dass eine Annahme unwahr ist, die sie schon als unwahr erkannt hat. Das kann sie tun, indem sie eine Incisive Question stellt, die sie die befreiende Annahme verinnerlichen lässt:",
                 questionsToAsk: [
                     "AF: 1-3",
                     "Blockierende Annahme",
