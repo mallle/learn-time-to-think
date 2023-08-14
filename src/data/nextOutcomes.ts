@@ -3,7 +3,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
         1: [
             {
                 question: "Action",
-                answer: "The Thinker wants to plan, decide, figure out how, etc. They are blocked by an unture limiting assumption. They need to replace it with, and embed a true liberation one in oder to achieve that outcome.",
+                answer: "The Thinker wants to plan, decide, figure out how, etc. They are blocked by an untrue limiting assumption. They need to replace it with, and embed a true liberating one in oder to achieve that outcome.",
                 questionsToAsk: [
                     "GQ: 1-6",
                     "Blocking Assumption",
@@ -12,7 +12,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
             },
             {
                 question: "Stop Doing, Stop Feeling, Remove Blocks",
-                answer: "The Thinker can stop doing or feeling things, or remove blocks to something, by finding the untrue limitation assumption that is making them do or feel that thing, and then embed a true liberating alternative assumption through an Incisive Question.",
+                answer: "The Thinker can stop doing or feeling things, or remove blocks to something, by finding the untrue limiting assumption that is making them do or feel that thing, and then embed a true liberating alternative assumption through an Incisive Question.",
                 questionsToAsk: [
                     "GQ: 1-6",
                     "Blocking Assumption",
@@ -159,7 +159,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
             },
             {
                 question: "Fühlen, dass eine Annahme war oder unwahr ist",
-                answer: "Die denkende Person kann auch fühlen wollen, dass eine Annahme wahr ist, oder fühlen, dass eine Annahme unwahr ist, die sie schon als unwahr erkannt hat. Das kann sie tun, indem sie eine Incisive Question stellt, die sie die befreiende Annahme verinnerlichen lässt:",
+                answer: "Die denkende Person kann auch fühlen wollen, dass eine Annahme wahr ist, oder fühlen, dass eine Annahme unwahr ist, die sie schon als unwahr erkannt hat. Das kann sie tun, indem sie eine Incisive Question stellt, die sie die befreiende Annahme verinnerlichen lässt:  ",
                 questionsToAsk: [
                     "AF: 1-3",
                     "Blockierende Annahme",
