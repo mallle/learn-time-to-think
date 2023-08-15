@@ -1,5 +1,5 @@
-export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
-    en: { 
+export const nextOutcomes: { [key: string]: { [key: number]: FlipCard[] } } = {
+    en: {
         1: [
             {
                 question: "Action",
@@ -17,7 +17,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
                     "GQ: 1-6",
                     "Blocking Assumption",
                 ],
-                iq: "If you knew that ______, how would you ______? ",      
+                iq: "If you knew that ______, how would you ______? ",
             },
             {
                 question: "Feeling",
@@ -35,9 +35,9 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
                 answer: "When the Thinker wants to understand why they do or feel something, all they have to do is to find the untrue assumption that is making them do or feel that, and they need have the answer to 'why I'",
                 questionsToAsk: [
                     "GQ: 1-6",
-                    "Blocking Assumption",
+                    "Blocking Assumption -> until untrue limiting assumption is found.",
                 ],
-                iq: "No IQ - only find the untrue assumption"
+                iq: "No IQ - only find the untrue limiting assumption"
             },
             {
                 question: "Identifying All Assumptions",
@@ -47,7 +47,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
                     "What are you assuming that _____(insert focus of assumptions)?",
                     "And what else are you assuming that _____(insert focus of assumptions)?",
                 ],
-                iq: "No IQ - only collect all assumptions"      
+                iq: "No IQ - only collect all assumptions"
             },
         ],
         3: [
@@ -59,7 +59,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
                     "Blocking Assumption",
                     "Confirm the truth of the assumption",
                 ],
-                iq: "If you knew that ______, what would change for you."      
+                iq: "If you knew that ______, what would change for you."
             },
             {
                 question: "Stop Assuming Something",
@@ -70,7 +70,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
                     "Confirm assumption to be untrue",
                     "Find true liberation assumption",
                 ],
-                iq: "If you knew that ______, how would you ______? ",    
+                iq: "If you knew that ______, how would you ______? ",
             },
             {
                 question: "Feeling the Truth or Untruth of an Assumption",
@@ -79,10 +79,10 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
                     "GQ: 1-3",
                     "Blocking Assumption",
                 ],
-                iq: "If you knew that ______, how would you feel?",       
+                iq: "If you knew that ______, how would you feel?",
             },
         ],
-        },
+    },
     de: {
         1: [
             {
@@ -110,7 +110,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
                     "AF: 1-6",
                     "Blockierende Annahme",
                 ],
-                iq:"Wenn du wüsstest, dass ______, wie würdest du dich fühlen?"
+                iq: "Wenn du wüsstest, dass ______, wie würdest du dich fühlen?"
             },
         ],
         2: [
@@ -119,7 +119,7 @@ export const nextOutcomes: { [key: string]: {[key: number]: FlipCard[] }} = {
                 answer: "Bei genauem Hinschauen ist es nicht überraschend, dass die Antwort auf „Warum ich etwas tue oder fühle“ eine Annahme ist. Und wenn die denkende Person verstehen will, warum sie etwas tut oder fühlt, muss sie nur die unwahre Annahme finden, die dazu führt, dass sie eben das tut oder fühlt. Dann hat sie die Antwort auf das „Warum ich“. (Und weil sie hier bereits das Ergebnis erreicht hat, wird bei diesem Ergebnis keine Incisive Question konstruiert).",
                 questionsToAsk: [
                     "AF: 1-6",
-                    "Blockierende Annahme",
+                    "Blockierende Annahme -> bis unwahre blokierebde Annahme gefunden wurde.",
                 ],
                 iq: "Keine IQ - finde nur die unwahre annahme."
             },

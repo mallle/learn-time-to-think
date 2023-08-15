@@ -11,8 +11,8 @@ export const questions: { [key: string]: string[] } = {
         "Worüber möchtest du nachdenken und was sind deine Gedanken?",
         "Was noch, denkst du, fühlst du, oder möchtest du ausserdem noch sagen?",
         "Was noch, wenn überhaupt etwas möchtet du in der verbleibende Zeit erreichen?",
-        "Welche annahmen hindern dich daran (führt dazu)?",
-        "Welche annahmen hindern dich noch daran (führt dazu)?",
-        "Welche annahmen hindern dich am meisten daran (führt am meisten dazu)?",
+        "Welche Annahmen hindern dich daran (führt dazu)?",
+        "Welche Annahmen hindern dich noch daran (führt dazu)?",
+        "Welche Annahmen hindern dich am meisten daran (führt am meisten dazu)?",
     ]
 };

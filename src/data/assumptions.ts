@@ -1,5 +1,5 @@
-export const assumptions: { [key: string]: {[key: string]: Assumptions[] }} = {
-    en: { 
+export const assumptions: { [key: string]: { [key: string]: Assumptions[] } } = {
+    en: {
         assumption: [
             {
                 type: "Check assumption",
@@ -7,87 +7,87 @@ export const assumptions: { [key: string]: {[key: string]: Assumptions[] }} = {
                 descriptions: [
                     "Do you think it is true that _____? ",
                     "What are your reasons for thinking so? ",
-                ]        
+                ]
             },
         ],
-        types: [ 
-                {
-                    thinker: "Thinker: true", 
-                    criteria: "Criteria: untrue", 
-                    type: "Makes you think it question",
-                    question: "What are you assuming that makes you think it is true that .....?"
-                },
-                {
-                    thinker: "Thinker: true (ongoing)", 
-                    criteria: "Criteria: untrue", 
-                    type: "Invitation Question",
-                    question: "You want to ....., you think it is true that ....., what could you credibly assume instead in order to .....?"
-                },
-                {
-                    thinker: "Thinker: untrue", 
-                    criteria: "Criteria: untrue", 
-                    type: "Question for the true liberating assumption",
-                    question: "As it is not true that ....., what do you think is true and liberating instead?"
-                },
-                {
-                    thinker: "Thinker: true or possible", 
-                    criteria: "Criteria: true or possible", 
-                    type: "Transition Question",
-                    question: "It is possible that ....., what are you assuming that causes that to stop/make you .....?",
-                },
-                {
-                    descriptions: [
-                        "Start thinking something is untrue that is actually true",
-                        "Stop thinking that something is true that is actually true"
-                    ],
-                    type: "Makes you want to think it question",
-                    question: "What are you assuming that makes you want to think it is untrue that .....?     What are you assuming that makes you want to stop thinking it is true that .....?",
-                },
-            ],
-        },
+        types: [
+            {
+                thinker: "Thinker: true",
+                criteria: "Criteria: untrue",
+                type: "Makes you think it question",
+                question: "What are you assuming that makes you think it is true that .....?"
+            },
+            {
+                thinker: "Thinker: true (ongoing)",
+                criteria: "Criteria: untrue",
+                type: "Invitation Question",
+                question: "You want to ....., you think it is true that ....., what could you credibly assume instead in order to .....?"
+            },
+            {
+                thinker: "Thinker: untrue",
+                criteria: "Criteria: untrue",
+                type: "Question for the true liberating assumption",
+                question: "As it is not true that ....., what do you think is true and liberating instead?"
+            },
+            {
+                thinker: "Thinker: true or possible",
+                criteria: "Criteria: true or possible",
+                type: "Transition Question (So what?)",
+                question: "It is possible that ....., what are you assuming that causes that to stop/make you .....?",
+            },
+            {
+                descriptions: [
+                    "Start thinking something is untrue that is actually true",
+                    "Stop thinking that something is true that is actually true"
+                ],
+                type: "Makes you want to think it question",
+                question: "What are you assuming that makes you want to think it is untrue that .....?     What are you assuming that makes you want to stop thinking it is true that .....?",
+            },
+        ],
+    },
     de: {
         assumption: [
             {
                 type: "Check Annahmen",
                 question: "Den Wahrheitsgehalt einer Annahme bestimmen",
                 descriptions: [
-                    "Denkst du, dass es wahr ist, dass _____?", 
+                    "Denkst du, dass es wahr ist, dass _____?",
                     "Was sind deine Gründe das zu denken? "
                 ]
             },
         ],
         types: [
             {
-                thinker: "Denker: wahr", 
-                criteria: "Kriterien: unwahr", 
+                thinker: "Denker: wahr",
+                criteria: "Kriterien: unwahr",
                 type: "Lässt dich dass denken Frage",
                 question: "Welche Annahme lässt dich denken, es sei wahr, dass .....?",
             },
             {
-                thinker: "Denker: wahr (weiterhin)", 
-                criteria: "Kriterien: unwahr", 
+                thinker: "Denker: wahr (weiterhin)",
+                criteria: "Kriterien: unwahr",
                 type: "Einladungsfrage",
                 question: "Du möchtest ....., du denkst, dass es wahr ist, dass ...... Was könntest du stattdessen glaubhaft annehmen um .....?",
             },
             {
-                thinker: "Denker: unwahr", 
-                criteria: "Kriterien: unwahr", 
+                thinker: "Denker: unwahr",
+                criteria: "Kriterien: unwahr",
                 type: "Frage nach der befreiende Annahme",
                 question: "Wenn es nicht wahr ist, dass ....., was denkst du, ist stattdessen wahr und befriend?",
             },
             {
-                thinker: "Denker: wahr oder möglich", 
-                criteria: "Kriterien: wahr oder möglich", 
-                type: "Übergangsfrage",
+                thinker: "Denker: wahr oder möglich",
+                criteria: "Kriterien: wahr oder möglich",
+                type: "Übergangsfrage (So what?)",
                 question: "Es ist möglich, dass ...... Welche Annahme verursacht, dass DAS dich daran hindert/dazu führt?",
             },
             {
                 descriptions: [
                     "Aufhören zu denken das et was wahr ist was wahr ist",
-                    "Anfagen etwas für unwaht zu halten was wahr ist",
+                    "Anfagen etwas für unwahr zu halten was wahr ist",
                 ],
                 type: "Möchtest du das denken Frage",
-                question: "Welche Annahme führt dazu, dass du denken möchtest es sei unwahr, dass .....? oder das du aufhören möchtest du denken es sei wahr, dass .....?",
+                question: "Welche Annahme führt dazu, dass du denken möchtest es sei unwahr, dass .....? Welche Annahme führt dazu dass du aufhören möchtest zu denken es sei wahr, dass .....?",
             },
         ]
     }
