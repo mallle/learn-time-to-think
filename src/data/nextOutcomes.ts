@@ -36,6 +36,7 @@ export const nextOutcomes: { [key: string]: { [key: number]: FlipCard[] } } = {
                 questionsToAsk: [
                     "GQ: 1-6",
                     "Blocking Assumption -> until untrue limiting assumption is found.",
+                    "You want to understand why ______, you now know that ______, du you now understand why you ______?"
                 ],
                 iq: "No IQ - only find the untrue limiting assumption"
             },
@@ -120,6 +121,7 @@ export const nextOutcomes: { [key: string]: { [key: number]: FlipCard[] } } = {
                 questionsToAsk: [
                     "AF: 1-6",
                     "Blockierende Annahme -> bis unwahre blokierebde Annahme gefunden wurde.",
+                    "Du willst verstehen warum ______, du hast herausgefunden dass ______, verstehst du jetzt warum?"
                 ],
                 iq: "Keine IQ - finde nur die unwahre annahme."
             },
