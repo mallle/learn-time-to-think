@@ -1,30 +1,34 @@
 <script lang="ts">
-    import '../styles.css';
-    import { language } from '../stores/language';
-    import { questions } from '../data/questions';
-    import NextOutcome from '@components/NextOutcome.svelte';
-    import { assumptions, incisiveQuestion } from '../data/assumptions';
+    import "../styles.css";
+    import { language } from "../stores/language";
+    import { questions } from "../data/questions";
+    import NextOutcome from "@components/NextOutcome.svelte";
+    import { assumptions, incisiveQuestion } from "../data/assumptions";
 
     let showAnswers: boolean = false;
 
-    const TEXT: { [key: string]: {[key: string]: string} } = {
+    const TEXT: { [key: string]: { [key: string]: string | string[] } } = {
         en: {
             title: "Next outcomes",
             generalQuestions: "General Questions",
             showAnswers: "Always show answers",
             assumptions: "Blocking Assumption",
-            break: "Waves and Pauses",            
+            break: "Waves and Pauses",
             breakStep1: "What did the thinker just do?",
             breakStep2: "Is the outcome still the same?",
-            breakStep3: "What does the thinker need not in order to think for them self?",
-            remember: "Don't forget",
-            remember1: "Das darf sein, auch das darf sein.",
-            remember2: "Denke dass du dich mehr anvertraust.",
-            remember3: "Jede Frage hat die funktion die letze zu sein.",
-            remember4: "Sitzungsergebnis: --> denkende soll für sich selbst denken.",
-            remember5: "I will give you my thinking but what more do you think or feel or want to say?",
-            remember6: "Why am I talking (WAIT)",
-            remember7: "Das nimmst du an, denkst du dass es wahr ist?",
+            breakStep3:
+                "What does the thinker need not in order to think for them self?",
+            rememberTitle: "Remember",
+            remember: [
+                "Which step would you like to take in your life and haven't done yet?",
+                "That may be, that may also be.",
+                "Thank you for entrusting yourself to me.",
+                "Every question is may to be the last.",
+                "Outcome: --> Thinkers should think for themselves.",
+                "I will give you my thinking but what more do you think or feel or want to say?",
+                "Why am I talking (WAIT)",
+                "You assume that, do you think it's true?",
+            ],
         },
         de: {
             title: "Sitzungsergebnisse",
@@ -35,29 +39,41 @@
             breakStep1: "Wo kommt der denkende her?",
             breakStep2: "Wo will der denkende hin?",
             breakStep3: "Was braucht der denkende von mir?",
-            remember: "Nicht vergessen",
-            remember1: "Das darf sein, auch das darf sein.",
-            remember2: "Denke dass du dich mehr anvertraust.",
-            remember3: "Jede Frage hat die funktion die letze zu sein.",
-            remember4: "Sitzungsergebnis: --> denkende soll für sich selbst denken.",
-            remember5: "Ich kann dir eine Gedanken teil aber was noch, denkst du, fühlst du oder möchtest du außerdem nocht sagen?",
-            remember6: "Why am I talking (WAIT)",
-            remember7: "Das nimmst du an, denkst du dass es wahr ist?",
-        }
-    }
+            rememberTitle: "Nicht vergessen",
+            remember: [
+                "Welchen schritt möchtest du in deinem leben angehen und tust es noch nicht? ",
+                "Das darf sein, auch das darf sein.",
+                "Danke dass du dich mir anvertraust.",
+                "Jede Frage hat die funktion die letze zu sein.",
+                "Sitzungsergebnis: --> denkende soll für sich selbst denken.",
+                "Ich kann dir meine Gedanken teilen aber was noch, denkst du, fühlst du oder möchtest du außerdem nocht sagen?",
+                "Why am I talking (WAIT)",
+                "Das nimmst du an, denkst du dass es wahr ist?",
+            ],
+        },
+    };
 
     function changeLang(lang: string) {
         language.set(lang);
     }
 </script>
+
 <section>
     <h1>Practice Time to Think Concepts</h1>
 
     <div class="lang-switch">
-        <button class="lang" class:active={$language === "en"} on:click={() => changeLang("en")}>en</button>
-        <button class="lang" class:active={$language === "de"} on:click={() => changeLang("de")}>de</button>    
+        <button
+            class="lang"
+            class:active={$language === "en"}
+            on:click={() => changeLang("en")}>en</button
+        >
+        <button
+            class="lang"
+            class:active={$language === "de"}
+            on:click={() => changeLang("de")}>de</button
+        >
     </div>
-    
+
     <h2>{TEXT[$language].break}</h2>
     <ul>
         <li class="question">{TEXT[$language].breakStep1}</li>
@@ -77,12 +93,12 @@
     <h2>{TEXT[$language].assumptions}</h2>
 
     <div class="cards">
-        {#each assumptions[$language].assumption as type }
+        {#each assumptions[$language].assumption as type}
             <div class="card big description">
                 <p>{type.type}</p>
                 <p>{type.question}</p>
                 {#if type.descriptions}
-                    {#each type.descriptions as description }
+                    {#each type.descriptions as description}
                         <p>{description}</p>
                     {/each}
                 {/if}
@@ -90,7 +106,7 @@
         {/each}
     </div>
     <div class="cards">
-        {#each assumptions[$language].types as type, index }
+        {#each assumptions[$language].types as type, index}
             <div class="card arrow-down" class:arrow-up={index > 2}>
                 {#if type.thinker}
                     <p>{type.thinker}</p>
@@ -99,7 +115,7 @@
                     <p>{type.criteria}</p>
                 {/if}
                 {#if type.descriptions}
-                    {#each type.descriptions as description }
+                    {#each type.descriptions as description}
                         <p>{description}</p>
                     {/each}
                 {/if}
@@ -107,8 +123,12 @@
         {/each}
     </div>
     <div class="cards">
-        {#each assumptions[$language].types as type, index }
-            <div class="card description" class:arrow-down={index <= 2} class:arrow-up={index > 2}>
+        {#each assumptions[$language].types as type, index}
+            <div
+                class="card description"
+                class:arrow-down={index <= 2}
+                class:arrow-up={index > 2}
+            >
                 <p>{type.type}</p>
                 <p>{type.question}</p>
             </div>
@@ -118,7 +138,7 @@
         <div class="card big description">
             <p>{incisiveQuestion[$language].name}</p>
             <p>{incisiveQuestion[$language].type}</p>
-            {#each incisiveQuestion[$language].questions as question }
+            {#each incisiveQuestion[$language].questions as question}
                 <p>{question}</p>
             {/each}
         </div>
@@ -127,27 +147,26 @@
 
 <section>
     <h2>{TEXT[$language].title}</h2>
-    
-    <button class:active={showAnswers} on:click={() => showAnswers = !showAnswers}>{TEXT[$language].showAnswers}</button> 
 
-    <NextOutcome section={1} {showAnswers}/>
+    <button
+        class:active={showAnswers}
+        on:click={() => (showAnswers = !showAnswers)}
+        >{TEXT[$language].showAnswers}</button
+    >
 
-    <NextOutcome section={2} {showAnswers}/>
+    <NextOutcome section={1} {showAnswers} />
 
-    <NextOutcome section={3} {showAnswers}/>
+    <NextOutcome section={2} {showAnswers} />
 
+    <NextOutcome section={3} {showAnswers} />
 </section>
 
 <section>
-    <h2>{TEXT[$language].remember}</h2>
+    <h2>{TEXT[$language].rememberTitle}</h2>
     <ul>
-        <li>{TEXT[$language].remember1}</li>
-        <li>{TEXT[$language].remember2}</li>
-        <li>{TEXT[$language].remember3}</li>
-        <li>{TEXT[$language].remember4}</li>
-        <li>{TEXT[$language].remember5}</li>
-        <li>{TEXT[$language].remember6}</li>
-        <li>{TEXT[$language].remember7}</li>
+        {#each TEXT[$language].remember as remember}
+            <li>{remember}</li>
+        {/each}
     </ul>
 </section>
 
@@ -174,7 +193,7 @@
         justify-content: flex-end;
         gap: 10px;
     }
-    
+
     .question + .question {
         margin-top: 20px;
     }
