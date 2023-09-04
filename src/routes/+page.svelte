@@ -17,7 +17,7 @@
             breakStep1: "What did the thinker just do?",
             breakStep2: "Is the outcome still the same?",
             breakStep3:
-                "What does the thinker need not in order to think for them self?",
+                "What does the thinker need in order to think for them self?",
             rememberTitle: "Remember",
             remember: [
                 "Which step would you like to take in your life and haven't done yet?",
@@ -36,9 +36,11 @@
             showAnswers: "Zeige antworten",
             assumptions: "Blockierende Annahme",
             break: "Pausenüberlegung",
-            breakStep1: "Wo kommt der denkende her?",
-            breakStep2: "Wo will der denkende hin?",
-            breakStep3: "Was braucht der denkende von mir?",
+            breakStep1: "Was ist im sinne des prozesses passiert?",
+            breakStep2:
+                "Ist das Ergebnis noch das gleiche? Was will die denkende Person als nächstes?",
+            breakStep3:
+                "Was braucht die denkende Person jetzt um weiter eingenständig denken zu können?",
             rememberTitle: "Nicht vergessen",
             remember: [
                 "Welchen schritt möchtest du in deinem leben angehen und tust es noch nicht? ",

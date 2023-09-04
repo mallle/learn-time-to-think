@@ -13,6 +13,6 @@ export const questions: { [key: string]: string[] } = {
         "Was noch, wenn überhaupt etwas möchtet du in der verbleibende Zeit erreichen?",
         "Welche Annahmen hindern dich daran (führt dazu)?",
         "Welche Annahmen hindern dich noch daran (führt dazu)?",
-        "Welche Annahmen hindern dich am meisten daran (führt am meisten dazu)?",
+        "Welche Annahme hindert dich am meisten daran (führt am meisten dazu)?",
     ]
 };

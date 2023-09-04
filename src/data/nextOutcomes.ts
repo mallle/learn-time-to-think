@@ -45,8 +45,8 @@ export const nextOutcomes: { [key: string]: { [key: number]: FlipCard[] } } = {
                 answer: "Finding all the assumptions the Thinker is making about something.",
                 questionsToAsk: [
                     "GQ: 1-3",
-                    "What are you assuming that _____(insert focus of assumptions)?",
-                    "And what else are you assuming that _____(insert focus of assumptions)?",
+                    "What are you assuming about _____(insert focus of assumptions)?",
+                    "And what else are you assuming about _____(insert focus of assumptions)?",
                 ],
                 iq: "No IQ - only collect all assumptions"
             },
