@@ -17,11 +17,11 @@ export const nextOutcomes: { [key: string]: { [key: number]: FlipCard[] } } = {
                     "GQ: 1-6",
                     "Blocking Assumption",
                 ],
-                iq: "If you knew that ______, how would you ______? ",
+                iq: "If you knew that ______, what would change for you?",
             },
             {
                 question: "Feeling",
-                answer: "The Thinker <b>wants to feel a certain way</b>. For those outcomes the Thinker removes the blocks by determining first what untrue assumption is blocking the feeling, and then finding and embedding a liberation alternative assumption through an Incisive Question in order to produce the desired feeling.",
+                answer: "The Thinker <b>wants to feel a certain way</b>. For those outcomes the Thinker removes the blocks by determining first what untrue assumption is blocking the feeling, and then finding and embedding a liberating alternative assumption through an Incisive Question in order to produce the desired feeling.",
                 questionsToAsk: [
                     "GQ: 1-6",
                     "Blocking Assumption",
@@ -32,7 +32,7 @@ export const nextOutcomes: { [key: string]: { [key: number]: FlipCard[] } } = {
         2: [
             {
                 question: "Understanding Why I",
-                answer: "When the Thinker wants to <b>understand why they do or feel something</b>, all they have to do is to find the untrue assumption that is making them do or feel that, and they need have the answer to 'why I'",
+                answer: "When the Thinker wants to <b>understand why they do or feel something</b>, all they have to do is to find the untrue assumption that is making them do or feel that, and they need to have the answer to 'why I'",
                 questionsToAsk: [
                     "GQ: 1-6",
                     "Blocking Assumption -> until untrue limiting assumption is found.",
@@ -60,7 +60,7 @@ export const nextOutcomes: { [key: string]: { [key: number]: FlipCard[] } } = {
                     "Blocking Assumption",
                     "Confirm the truth of the assumption",
                 ],
-                iq: "If you knew that ______, what would change for you."
+                iq: "If you knew that ______, what would change for you?"
             },
             {
                 question: "Stop Assuming Something",
@@ -71,11 +71,11 @@ export const nextOutcomes: { [key: string]: { [key: number]: FlipCard[] } } = {
                     "Confirm assumption to be untrue",
                     "Find true liberation assumption",
                 ],
-                iq: "If you knew that ______, how would you ______? ",
+                iq: "If you knew that ______, what would change for you?",
             },
             {
                 question: "Feeling the Truth or Untruth of an Assumption",
-                answer: "The Thinker want to <b>feel the truth or untruth of an assumption</b> that they already know ot be untrue. They can do that by finding the true liberation alternative assumption and embedding it through an Incisive Question.",
+                answer: "The Thinker want to <b>feel the truth or untruth of an assumption</b> that they already know ot be untrue. They can do that by finding the true liberating alternative assumption and embedding it through an Incisive Question.",
                 questionsToAsk: [
                     "GQ: 1-3",
                     "Blocking Assumption",
@@ -102,7 +102,7 @@ export const nextOutcomes: { [key: string]: { [key: number]: FlipCard[] } } = {
                     "AF: 1-6",
                     "Blockierende Annahme",
                 ],
-                iq: "Wenn du wüsstest, dass ______ wie würdest du dann ______? ",
+                iq: "Wenn du wüsstest, dass ______ was würde sich dann für dich verändern?"
             },
             {
                 question: "Gefühl",
@@ -157,7 +157,7 @@ export const nextOutcomes: { [key: string]: { [key: number]: FlipCard[] } } = {
                     "Wahre befreiende annahme finden",
                     "Verinnerlichen der Wahre befreiende annahme durch IQ"
                 ],
-                iq: "Wenn du wüsstest, dass ______ wie würdest du dann ______?"
+                iq: "Wenn du wüsstest, dass ______ wie würdest du dann ______?, Wenn du wüsstest, dass ______ was würde sich dann für dich verändern?"
             },
             {
                 question: "Fühlen, dass eine Annahme war oder unwahr ist",
