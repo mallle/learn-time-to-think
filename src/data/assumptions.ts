@@ -14,8 +14,10 @@ export const assumptions: { [key: string]: { [key: string]: Assumptions[] } } = 
             {
                 thinker: "Thinker: true",
                 criteria: "Criteria: untrue",
-                type: "Makes you think it question",
-                question: "What are you assuming that makes you think it is true that .....?"
+                // type: "Makes you think it question",
+                type: "The Makes It Seem Question",
+                "question": "What are you assuming that makes that seem true to you?",
+                // question: "What are you assuming that makes you think it is true that .....?"
             },
             {
                 thinker: "Thinker: true (ongoing)",
@@ -32,16 +34,18 @@ export const assumptions: { [key: string]: { [key: string]: Assumptions[] } } = 
             {
                 thinker: "Thinker: true or possible",
                 criteria: "Criteria: true or possible",
-                type: "Transition Question (So what?)",
+                type: "Transition/Causes Question (So what?)",
                 question: "It is possible that ....., what are you assuming that causes that to stop/make you .....?",
             },
             {
+                // type: "Makes you want to think it question",
+                type: "The Seem Question (assumption true/untrue) / The Need To Be Question (assumption untrue)",
                 descriptions: [
                     "Start thinking something is untrue that is actually true",
                     "Stop thinking that something is true that is actually true"
                 ],
-                type: "Makes you want to think it question",
-                question: "What are you assuming that makes you want to think it is untrue that .....?     What are you assuming that makes you want to stop thinking it is true that .....?",
+                // question: "What are you assuming that makes you want to think it is untrue that .....?     What are you assuming that makes you want to stop thinking it is true that .....?",
+                question: "You think it is true/untrue that (insert true/untrue assumption). What are you assuming that makes that seem true/untrue to you? / Although you think it is untrue (or unknowable) that (insert untrue/unknowable assumption), you want to think it is true. What are you assuming that makes that need to be true for you?",
             },
         ],
     },

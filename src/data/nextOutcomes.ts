@@ -88,12 +88,17 @@ export const nextOutcomes: { [key: string]: { [key: number]: FlipCard[] } } = {
         1: [
             {
                 question: "Aktion",
-                answer: "Die denkende Person möchte <b>planen</b>, <b>entscheiden</b>, <b>herausfinden</b>, wie sie etwas tun kann etc. Aber ihr Denken ist durch eine unwahre, beschränkende Annahme blockiert. Sie muss diese Annahme durch eine wahre, befreiende Annahme ersetzen und diese einbetten, um ihr Ergebnis zu erreichen.",
+                answer: "Die denkende Person möchte <b>planen</b>, <b>entscheiden</b>, <b>herausfinden</b>, wie sie etwas tun kann etc. Aber ihr Denken ist durch eine unwahre, beschränkende Annahme blockiert. Sie muss diese unwahre Annahme durch eine wahre, befreiende Annahme ersetzen und wahre Annahme einbetten, um ihr Ergebnis zu erreichen.",
                 questionsToAsk: [
                     "AF: 1-6",
-                    "Blockierende Annahme",
+                    "Blockierende Annahme prüfen - denkst du dass es wahr ist, dass ______",
+                    "Wahre befreiende Annahme finden",
                 ],
-                iq: "Wenn du wüsstest, dass ______ wie würdest du dann ______? ",
+                iq: "Wenn du wüsstest, dass ______ wie würdest du dann ______?",
+                example: {
+                    outcome: "Ich möchte mir das Erlaubnis geben, selbst zu entscheiden",
+                    questionForAssumptions: "Welche Annahmen hindern dich daran, dir das Erlaubnis zu geben, selbst zu entscheiden?"
+                }
             },
             {
                 question: "Aufhören etwas zu tun, Aufhören etwas zu fühlen, Blokaden auflösen",

@@ -6,6 +6,12 @@
   export let iq: string | undefined = undefined;
   export let alwaysFlipped: boolean = false;
   export let canFlip: boolean = true;
+  export let example:
+    | {
+        outcome: string;
+        questionForAssumptions: string;
+      }
+    | undefined = undefined;
 
   let flipped: boolean = false;
 
@@ -50,6 +56,12 @@
         <br />
         <p>Incisive Question</p>
         <p>{iq}</p>
+      {/if}
+      {#if example}
+        <br />
+        <p>Beispiel</p>
+        <p>{example.outcome}</p>
+        <p>{example.questionForAssumptions}</p>
       {/if}
     </div>
   </div>
